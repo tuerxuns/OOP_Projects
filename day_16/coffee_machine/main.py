@@ -21,10 +21,11 @@ def main():
 
         else:
             chosen_coffee = menu.find_drink(user_request)
-            if coffee_maker.is_resource_sufficient(
-                    chosen_coffee
-            ) and money_machine.make_payment(chosen_coffee.cost):
-                coffee_maker.make_coffee(chosen_coffee)
+            if chosen_coffee is not None:
+                if coffee_maker.is_resource_sufficient(
+                        chosen_coffee
+                ) and money_machine.make_payment(chosen_coffee.cost):
+                    coffee_maker.make_coffee(chosen_coffee)
 
 
 if __name__ == "__main__":
