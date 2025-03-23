@@ -1,12 +1,11 @@
 import random
-from random import randrange
 from turtle import Turtle, Screen
 
 timmy = Turtle()
 
 
 def random_color():
-    color = tuple(random.randint(0, 255) for i in range(3))
+    color = tuple(random.randint(0, 255) for _ in range(3))
     return color
 
 
@@ -15,7 +14,7 @@ def shape_drawer(sides):
         timmy.forward(100)
         timmy.right(360 / sides)
     # noinspection PyTypeChecker
-    timmy.pencolor(random_color())
+    timmy.color(random_color())
 
 
 def main():
