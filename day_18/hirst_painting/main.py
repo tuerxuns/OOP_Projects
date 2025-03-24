@@ -3,7 +3,7 @@ import turtle
 from turtle import Turtle, Screen
 from hirst_colors import colors_list
 
-DOT_SIZE = 40
+DOT_SIZE = 45
 DOT_SPACING = DOT_SIZE * 2.5
 GRID_SIZE = 10
 
@@ -13,6 +13,7 @@ screen.title("Hirst Dot Painting")
 turtle.colormode(255)
 
 brush = Turtle()
+brush.hideturtle()
 brush.speed(0)
 brush.up()
 
@@ -28,7 +29,7 @@ def spot_painter():
 
 def painter(grid_size, dot_spacing):
     size = grid_size * dot_spacing
-    start_x = -size / 2 + 30
+    start_x = -size / 2 + 50
     start_y = -size / 2 + 50
     brush.teleport(start_x, start_y)
 
