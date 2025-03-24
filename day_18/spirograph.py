@@ -23,7 +23,7 @@ def main():
     timmy.speed(0)
     screen = Screen()
     screen.colormode(255)
-    circle_drawer(200)
+    circle_drawer(120)
     screen.exitonclick()
 
 
