@@ -8,7 +8,7 @@ DOT_SPACING = DOT_SIZE * 2.5
 GRID_SIZE = 10
 
 screen = Screen()
-screen.setup(width=0.50, height=1.0)
+screen.setup(width=0.50, height=0.8)
 screen.title("Hirst Dot Painting")
 turtle.colormode(255)
 
@@ -28,8 +28,8 @@ def spot_painter():
 
 def painter(grid_size, dot_spacing):
     size = grid_size * dot_spacing
-    start_x = -size / 2
-    start_y = -size / 2
+    start_x = -size / 2 + 30
+    start_y = -size / 2 + 50
     brush.teleport(start_x, start_y)
 
     for row in range(grid_size):
