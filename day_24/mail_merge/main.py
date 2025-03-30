@@ -18,8 +18,9 @@ with open("./Input/Letters/starting_letter.txt") as letter:
     invite_letter = letter.read()
     for guest in stripped_guest:
         new_letter = invite_letter.replace("[name]", guest)
-
+        # fmt: off
         with open(
                 f"./Output/ReadyToSend/letter_for_{guest}.txt", mode="w"
         ) as final_letter:
             final_letter.write(new_letter)
+        # fmt: on
